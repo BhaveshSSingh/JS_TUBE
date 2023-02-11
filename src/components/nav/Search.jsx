@@ -9,7 +9,7 @@ const Search = () => {
 
   const searchHandler = (e) => {
     // e.preventDefault();
-    // setQuery(e.target.value);
+    setQuery(e.target.value);
     // dispatch(searchLetter(query));
   };
 
@@ -36,7 +36,7 @@ const Search = () => {
             <input
               type="text"
               id="simple-search"
-              className="bg-indigo-200 border border-indigold-300 texindigoer-900 text-sm rounded-lg focus:rinindigoer-500 focus:bordeindigoer-500 block w-full pl-10 p-2.5  dark:bg-gray-400 dark:bordeindigoer-600 dark:placeholder-gray-800 dark:white dark:focus:rinindigoer-500 dark:focus:bordeindigoer-500"
+              className="bg-indigo-200 border border-indigo-300 text-indigo-900 text-sm rounded-lg focus:ring indigo-500 focus:border-indigo-500 block w-full pl-10 p-2.5  dark:bg-gray-400 dark:border-indigo-600 dark:placeholder-gray-800 dark:white dark:focus:ring-indigo-500 dark:focus:border-indigo-500"
               placeholder="Search"
               required
               value={query}

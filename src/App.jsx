@@ -1,14 +1,15 @@
 import { Outlet } from "react-router-dom";
 import Nav from "./components/nav/Nav";
+import Panel from "./components/Panel";
 
 function App() {
   return (
-    <div className=" bg-white text-black dark:bg-gray-900 dark:text-white">
+    <div className=" bg-white text-black dark:bg-gray-900 dark:text-white h-screen">
       {/* <LoginPage /> */}
 
       <Nav />
       <div className="flex">
-        {/* <Panel /> */}
+        <Panel />
         <Outlet />
         {/* <Body /> */}
         {/* <WatchPage /> */}
