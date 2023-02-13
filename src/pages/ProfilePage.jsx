@@ -29,7 +29,7 @@ const ProfilePage = () => {
         <div className="px-6">
           <div className="flex flex-wrap justify-center">
             <div className="w-full flex justify-center">
-              <div className="w-40 h-40  ring-4 ring-pink-400 p-3 object-fill rounded-full text-gray-100 bg-purple-500 flex  justify-center mr-4">
+              <div className="w-40 h-40  ring-4 ring-indigo-400 p-3 object-fill rounded-full text-gray-100 bg-indigo-500 flex  justify-center mr-4">
                 <div className="text-9xl pt-2">
                   {/* {user?.displayName.substring(0, 1)} */}
                 </div>

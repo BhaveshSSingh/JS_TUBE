@@ -1,9 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
-import Body from "./components/Body";
+// import Body from "./components/Body";
 import ErrorMsg from "./components/Error";
+import Home from "./pages/home/Home";
+import LikePage from "./pages/LikePage";
 import ProfilePage from "./pages/ProfilePage";
-// import WatchPage from "./pages/WatchPage";
+import Subscription from "./pages/Subscription";
+import WatchPage from "./pages/WatchPage";
 
 export const router = createBrowserRouter([
   {
@@ -15,10 +18,12 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/home",
-        element: <Body />,
+        element: <Home />,
       },
-      //   { path: "/watch", element: <WatchPage /> },
+      { path: "/watch", element: <WatchPage /> },
       { path: "/profile", element: <ProfilePage /> },
+      { path: "/subscriptions", element: <Subscription /> },
+      { path: "/liked", element: <LikePage /> },
     ],
   },
 ]);

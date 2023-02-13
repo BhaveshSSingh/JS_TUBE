@@ -10,7 +10,7 @@ const ErrorMsg = () => {
         <Link to="/">
           <button
             type="button"
-            className="bg-blue-500 text-white p-2 rounded-md m-2"
+            className="bg-indigo-500 text-white p-2 rounded-md m-2"
           >
             Go back
           </button>

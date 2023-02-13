@@ -21,7 +21,7 @@ const Nav = () => {
 
   return (
     <>
-      <div className="z-50 header sticky top-0 bg-white shadow-md dark:shadow-lg flex items-center justify-between px-6 py-1 dark:bg-gray-800 dark:text-gray-100">
+      <div className=" header sticky top-0 bg-white shadow-md dark:shadow-lg flex items-center justify-between px-6 py-1 dark:bg-gray-800 dark:text-gray-100">
         <span className="w-3/12 underline flex items-center">
           <RxHamburgerMenu
             size={25}

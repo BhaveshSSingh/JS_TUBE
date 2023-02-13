@@ -2,9 +2,9 @@
 import TagList from "./TagList";
 import VideoContainer from "./VideoContainer";
 
-const Body = () => {
+const Home = () => {
   return (
-    <div className="p-2 h-screen">
+    <div className="p-2 pl-0  ">
       <TagList />
       <VideoContainer />
       {/* <Pagination /> */}
@@ -12,4 +12,4 @@ const Body = () => {
   );
 };
 
-export default Body;
+export default Home;
