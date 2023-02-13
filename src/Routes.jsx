@@ -9,6 +9,8 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    baseName: "js-tube.vercel.app/home",
+
     errorElement: <ErrorMsg />,
     children: [
       {
