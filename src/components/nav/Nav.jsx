@@ -16,12 +16,11 @@ const Nav = () => {
 
   const toggleMenuFn = () => {
     dispatch(toggleMenu());
-    console.log("clicked hamburger");
   };
 
   return (
     <>
-      <div className=" header sticky top-0 bg-white shadow-md dark:shadow-lg flex items-center justify-between px-6 py-1 dark:bg-gray-800 dark:text-gray-100">
+      <div className="z-30 header sticky top-0 bg-white shadow-md dark:shadow-lg flex items-center justify-between px-6 py-1 dark:bg-gray-800 dark:text-gray-100">
         <span className="w-3/12 underline flex items-center">
           <RxHamburgerMenu
             size={25}
@@ -29,7 +28,7 @@ const Nav = () => {
             onClick={toggleMenuFn}
           />
           <IoLogoJavascript size={40} className="text-indigo-600" />
-          <h3 className="text-indigo-600 underline text-xl">Cafe</h3>
+          <h3 className="text-indigo-600 underline text-xl">Tube</h3>
         </span>
 
         <Search />

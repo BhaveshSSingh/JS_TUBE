@@ -12,27 +12,26 @@ const VideoCard = () => {
               alt=""
             />
           </div>
-          <div className="p-3">
-            <h5 className="text-gray-900 text-lg font-medium mb-1 dark:text-gray-300 ">
-              Video title Lorem ipsum dolor, sit amet consectetur adipisicing.
-            </h5>
-            {/*  */}
-            <div class="flex items-center space-x-4">
+          <div className="p-3 flex  ">
+            <div className="w-20 ">
               <img
-                class="w-15 h-10 rounded-full"
+                class="bg-indigo-400 h-10 rounded-full"
                 src="https://yt3.ggpht.com/A_3mLbY1nzH3MPjzEftkO8LK02HazD4PWy9XbwLDQ4hDkbBCla4EkcVNM0kZDTeMWqNCD4jVbA=s68-c-k-c0x00ffffff-no-rj"
                 alt="channel pfp"
               />
-              <div class="font-medium dark:text-white">
-                <p className="text-base font-bold text-indigo-500">
-                  Tanay Pratap
+            </div>
+            <h5 className="text-gray-900 text-sm  dark:text-gray-300 font-bold">
+              Video title Lorem ipsum dolor, sit amet adipis.
+            </h5>
+          </div>
+          <div class="flex items-center space-x-4 px-3 pb-1 pt-0">
+            <div class="font-medium dark:text-white">
+              <p className="text-indigo-500">Tanay Pratap</p>
+              <div class="text-sm ">
+                <p className=" text-base mb-1 font-bold flex items-center dark:text-gray-400">
+                  10090 views
+                  <GoPrimitiveDot className="mx-2" size={10} /> 2 Days ago
                 </p>
-                <div class="text-sm ">
-                  <p className=" text-base mb-1 font-bold flex items-center dark:text-gray-400">
-                    10090 <GoPrimitiveDot className="mx-2" size={10} /> 2 Days
-                    ago
-                  </p>
-                </div>
               </div>
             </div>
           </div>

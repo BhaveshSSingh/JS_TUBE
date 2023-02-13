@@ -1,23 +1,22 @@
 import { Link } from "react-router-dom";
-// import CommentComp from "../components/CommentComp";
-import VideoCard from "./home/VideoCard";
+import VideoCard from "../home/VideoCard";
+import CommentComp from "./CommentComp";
+import LiveChat from "./LiveChat";
+import VideoComp from "./VideoComp";
 
 const WatchPage = () => {
   return (
-    //   Have to make this responsive for on medium and small screen and  display block
-    <div className="block justify-between w-full  p-2 xl:flex">
-      <div className="w-full bg-indigo-400">
-        <iframe
-          width="200px"
-          src="https://www.youtube.com/watch?v=bC6RyaT4y5Q"
-          frameborder="0"
-        />{" "}
-        Like Comment Watch later icons
-        {/*  */}
-        {/* <CommentComp /> */}
+    <>
+      <div className="block justify-between w-full  p-2 xl:flex">
+        <div className="w-full border border-indigo-500 rounded-2xl">
+          <VideoComp />
+        </div>
+
+        <div className=" xl:w-[40vw]">
+          <LiveChat />
+        </div>
       </div>
-      {/* Hide the videos when from large screen */}
-      <Link to="/watch">
+      {/* <Link to="/watch">
         <div className="">
           <VideoCard />
           <VideoCard />
@@ -41,8 +40,8 @@ const WatchPage = () => {
           <VideoCard />
           <VideoCard />
         </div>
-      </Link>
-    </div>
+      </Link> */}
+    </>
   );
 };
 

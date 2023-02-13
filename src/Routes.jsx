@@ -6,7 +6,7 @@ import Home from "./pages/home/Home";
 import LikePage from "./pages/LikePage";
 import ProfilePage from "./pages/ProfilePage";
 import Subscription from "./pages/Subscription";
-import WatchPage from "./pages/WatchPage";
+import WatchPage from "./pages/watch/WatchPage";
 
 export const router = createBrowserRouter([
   {
