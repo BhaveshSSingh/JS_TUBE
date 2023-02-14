@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 import VideoCard from "../home/VideoCard";
 import CommentComp from "./CommentComp";
-import LiveChat from "./LiveChat";
+import LiveChat from "./live/LiveChat";
 import VideoComp from "./VideoComp";
 
 const WatchPage = () => {
   return (
     <>
-      <div className="block justify-between w-full  p-2 xl:flex">
-        <div className="w-full border border-indigo-500 rounded-2xl">
+      <div className="block justify-between w-full mt-3 p-2 xl:flex">
+        <div className="w-full mb-4  border border-gray-500 rounded-2xl">
           <VideoComp />
         </div>
 

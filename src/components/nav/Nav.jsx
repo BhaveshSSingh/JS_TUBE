@@ -35,7 +35,10 @@ const Nav = () => {
         <div className="flex justify-center items-center">
           <Link to="/profile">
             <div className="w-10 h-10  ring-4 ring-indigo-400 p-1 object-fill rounded-full text-gray-100 bg-indigo-500 flex  justify-center mr-4">
-              {/* <div className="text-2xl">{user?.substring(0, 1)}</div> */}
+              <img
+                src="https://api.dicebear.com/5.x/micah/svg?seed=20"
+                alt="My profile"
+              />
             </div>
           </Link>
 
