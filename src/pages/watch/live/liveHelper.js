@@ -10,3 +10,10 @@ export function randomMsgs(length) {
   }
   return result;
 }
+
+export const Scroll = (container) => {
+  const { offsetHeight, scrollHeight, scrollTop } = container.current;
+  if (scrollHeight <= scrollTop + offsetHeight + 100) {
+    container.current?.scrollTo(0, scrollHeight);
+  }
+};
