@@ -1,7 +1,7 @@
 import React from "react";
 
 const LikePage = () => {
-  return <div className="h-full">LikePage</div>;
+  return <div className="min-h-screen">LikePage</div>;
 };
 
 export default LikePage;

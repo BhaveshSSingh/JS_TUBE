@@ -1,6 +1,4 @@
-import { Link } from "react-router-dom";
 import VideoCard from "../home/VideoCard";
-import CommentComp from "./CommentComp";
 import LiveChat from "./live/LiveChat";
 import VideoComp from "./VideoComp";
 
@@ -14,33 +12,30 @@ const WatchPage = () => {
 
         <div className=" xl:w-[40vw]">
           <LiveChat />
+
+          <VideoCard />
+          <VideoCard />
+          <VideoCard />
+          <VideoCard />
+          <VideoCard />
+          <VideoCard />
+          <VideoCard />
+          <VideoCard />
+          <VideoCard />
+          <VideoCard />
+          <VideoCard />
+          <VideoCard />
+          <VideoCard />
+          <VideoCard />
+          <VideoCard />
+          <VideoCard />
+          <VideoCard />
+          <VideoCard />
+          <VideoCard />
+          <VideoCard />
+          <VideoCard />
         </div>
       </div>
-      {/* <Link to="/watch">
-        <div className="">
-          <VideoCard />
-          <VideoCard />
-          <VideoCard />
-          <VideoCard />
-          <VideoCard />
-          <VideoCard />
-          <VideoCard />
-          <VideoCard />
-          <VideoCard />
-          <VideoCard />
-          <VideoCard />
-          <VideoCard />
-          <VideoCard />
-          <VideoCard />
-          <VideoCard />
-          <VideoCard />
-          <VideoCard />
-          <VideoCard />
-          <VideoCard />
-          <VideoCard />
-          <VideoCard />
-        </div>
-      </Link> */}
     </>
   );
 };

@@ -11,6 +11,12 @@ const LiveChat = () => {
   const chat = useSelector((store) => store.chat.chat);
   const container = useRef(null);
 
+  const [hide, setHide] = useState("");
+
+  const hideHandler = () => {
+    setHide("h");
+  };
+
   useEffect(() => {
     Scroll(container);
   }, [chat, text]);
@@ -29,24 +35,27 @@ const LiveChat = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       const seed = Math.round(Math.random() * 100);
-      const pfpURL = `https://api.dicebear.com/5.x/micah/svg?seed=${seed}`;
+      // const pfpURL = `https://api.dicebear.com/5.x/micah/svg?seed=${seed}`;
 
       dispatch(
         addToChat({
           message: randomMsgs(40),
-          pfp: pfpURL,
+          // pfp: pfpURL,
         })
       );
-    }, 1000);
+    }, 15000);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <>
       <div class="flex-1   h-[600px] justify-between flex flex-col  border ml-2  border-indigo-400  rounded-lg ">
-        <div class="flex px-3 sm:items-center justify-between py-2  border-b-2  border-gray-200 dark:border-gray-600">
+        <div class="flex px-3 sm:items-center justify-between py-2  border-b-2  border-gray-200 dark:border-gray-600 ">
           Live Chat
-          <button class="inline-flex justify-center p-2 text-indigo-600 rounded-full cursor-pointer hover:bg-indigo-100 dark:text-indigo-500 dark:hover:bg-gray-600">
+          <button
+            class="inline-flex justify-center p-2 text-indigo-600 rounded-full cursor-pointer hover:bg-indigo-100 dark:text-indigo-500 dark:hover:bg-gray-600"
+            onClick={hideHandler}
+          >
             <HiChevronUpDown size={20} />
           </button>
         </div>

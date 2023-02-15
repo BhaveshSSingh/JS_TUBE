@@ -1,5 +1,4 @@
-import { AiOutlineLike } from "react-icons/ai";
-import { BsChatLeftDots } from "react-icons/bs";
+import { AiOutlineDislike, AiOutlineLike } from "react-icons/ai";
 import CommentComp from "./CommentComp";
 
 const VideoComp = () => {
@@ -43,7 +42,7 @@ const VideoComp = () => {
         <div className="flex pr-3 justify-between border border-gray-900 dark:border-gray-400 h-full rounded-full w-28">
           <AiOutlineLike className="m-2 ml-3 cursor-pointer  " size={30} />
           <div className=" border border-l-gray-900" />
-          <BsChatLeftDots className="mt-3 m-2 cursor-pointer " size={26} />
+          <AiOutlineDislike className="mt-3 m-2 cursor-pointer " size={26} />
         </div>
       </div>
 

@@ -27,8 +27,10 @@ const Nav = () => {
             className="ml-[-10px] mr-4 cursor-pointer dark:text-white"
             onClick={toggleMenuFn}
           />
-          <IoLogoJavascript size={40} className="text-indigo-600" />
-          <h3 className="text-indigo-600 underline text-xl">Tube</h3>
+          <Link to="/home" className="flex items-center">
+            <IoLogoJavascript size={40} className="text-indigo-600" />
+            <h3 className="text-indigo-600 underline text-xl">Tube</h3>
+          </Link>
         </span>
 
         <Search />
