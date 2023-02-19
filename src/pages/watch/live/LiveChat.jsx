@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { AiOutlineSend } from "react-icons/ai";
 import { HiChevronUpDown } from "react-icons/hi2";
 import { useDispatch, useSelector } from "react-redux";
-import { addToChat } from "../../../app/chatSlice";
+import { addToChat } from "../../../app/features/chatSlice";
 import { randomMsgs, Scroll } from "./liveHelper";
 
 const LiveChat = () => {
@@ -11,11 +11,11 @@ const LiveChat = () => {
   const chat = useSelector((store) => store.chat.chat);
   const container = useRef(null);
 
-  const [hide, setHide] = useState("");
+  // const [hide, setHide] = useState("");
 
-  const hideHandler = () => {
-    setHide("h");
-  };
+  // const hideHandler = () => {
+  //   setHide("h");
+  // };
 
   useEffect(() => {
     Scroll(container);
@@ -54,7 +54,7 @@ const LiveChat = () => {
           Live Chat
           <button
             class="inline-flex justify-center p-2 text-indigo-600 rounded-full cursor-pointer hover:bg-indigo-100 dark:text-indigo-500 dark:hover:bg-gray-600"
-            onClick={hideHandler}
+            // onClick={hideHandler}
           >
             <HiChevronUpDown size={20} />
           </button>

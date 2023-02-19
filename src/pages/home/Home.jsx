@@ -4,7 +4,7 @@ import VideoContainer from "./VideoContainer";
 
 const Home = () => {
   return (
-    <div className="p-2 pl-0  ">
+    <div className="p-2 pl-0  min-h-screen">
       <TagList />
       <VideoContainer />
       {/* <Pagination /> */}

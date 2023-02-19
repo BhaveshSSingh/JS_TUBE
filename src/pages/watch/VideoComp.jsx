@@ -40,9 +40,16 @@ const VideoComp = () => {
           </div>
         </div>
         <div className="flex pr-3 justify-between border border-gray-900 dark:border-gray-400 h-full rounded-full w-28">
-          <AiOutlineLike className="m-2 ml-3 cursor-pointer  " size={30} />
-          <div className=" border border-l-gray-900" />
-          <AiOutlineDislike className="mt-3 m-2 cursor-pointer " size={26} />
+          <AiOutlineLike
+            className="m-2 ml-3 cursor-pointer hover:text-blue-600 "
+            size={30}
+          />
+
+          <div className=" border border-l-gray-900  " />
+          <AiOutlineDislike
+            className="mt-3 m-2 hover:text-red-600 cursor-pointer "
+            size={28}
+          />
         </div>
       </div>
 

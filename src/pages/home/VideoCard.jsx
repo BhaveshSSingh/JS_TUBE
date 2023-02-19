@@ -4,10 +4,10 @@ const VideoCard = () => {
   return (
     <>
       <div className="m-2 h-min flex  justify-center rounded-lg  pt-2 ">
-        <div className="rounded-lg shadow-lg  max-w-80 border border-t-2 border-gray-700 lg:w-80 md:w-64">
+        <div className="rounded-lg shadow-lg  max-w-80 border border-t-2  dark:border-gray-700 lg:w-80 md:w-64">
           <div data-mdb-ripple="true" data-mdb-ripple-color="light">
             <img
-              className="rounded-t-lg h-48 w-full"
+              className="rounded-t-lg h-48 w-full "
               src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
               alt=""
             />
@@ -15,7 +15,7 @@ const VideoCard = () => {
           <div className="p-2 pr-0 flex">
             <div className="w-14">
               <img
-                class="bg-indigo-400 h-10 rounded-full"
+                class="bg-indigo-400 h-10 rounded-full ring-1 ring-sky-600"
                 src="https://yt3.ggpht.com/A_3mLbY1nzH3MPjzEftkO8LK02HazD4PWy9XbwLDQ4hDkbBCla4EkcVNM0kZDTeMWqNCD4jVbA=s68-c-k-c0x00ffffff-no-rj"
                 alt="channel pfp"
               />

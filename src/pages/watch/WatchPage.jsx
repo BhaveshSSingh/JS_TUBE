@@ -6,7 +6,7 @@ const WatchPage = () => {
   return (
     <>
       <div className="block justify-between w-full mt-3 p-2 xl:flex">
-        <div className="w-full mb-4  border border-gray-500 rounded-2xl">
+        <div className="w-full mb-4 rounded-2xl">
           <VideoComp />
         </div>
 

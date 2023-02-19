@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { ThemeContext } from "../../context/ThemeContext";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { toggleMenu } from "../../app/appSlice";
+import { toggleMenu } from "../../app/features/appSlice";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 const Nav = () => {
