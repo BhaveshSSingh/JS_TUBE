@@ -7,15 +7,14 @@ import Panel from "./components/Panel";
 // import Login from "./pages/LoginPage";
 
 function App() {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    navigate("/home");
-  }, []);
-
   useEffect(() => {
     dispatch(fetchHomePageVids());
+  }, []);
+
+  const navigate = useNavigate();
+  useEffect(() => {
+    navigate("/home");
   }, []);
 
   return (

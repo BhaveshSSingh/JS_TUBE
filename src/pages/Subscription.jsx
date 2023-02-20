@@ -1,6 +1,9 @@
+import BackToHome from "../components/BackToHome";
+
 const Subscription = () => {
   return (
-    <div className=" min-h-screen m-auto ">
+    <div className=" min-h-screen w-screen m-auto ">
+      <BackToHome />
       <div className="flex p-4 items-center  border-b  border-b-gray-400 dark:border-b-gray-700">
         <div
           className="w-32 h-32  ring-4 ring-indigo-400 p-1 object-fill rounded-full text-gray-100 bg-indigo-500 flex  justify-center mr-4 

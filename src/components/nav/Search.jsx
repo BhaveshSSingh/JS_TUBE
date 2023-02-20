@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 // import { useDispatch } from "react-redux";
 // import { searchLetter } from "../../app/features/emailSlice";
 
@@ -6,10 +7,11 @@ const Search = () => {
   const [query, setQuery] = useState("");
 
   //   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const searchHandler = (e) => {
-    // e.preventDefault();
-    setQuery(e.target.value);
+    e.preventDefault();
+    navigate("/search");
     // dispatch(searchLetter(query));
   };
 
@@ -40,7 +42,7 @@ const Search = () => {
               placeholder="Search"
               required
               value={query}
-              onChange={searchHandler}
+              onChange={(e) => setQuery(e.target.value)}
             />
           </div>
           <button

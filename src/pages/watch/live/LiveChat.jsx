@@ -67,7 +67,7 @@ const LiveChat = () => {
         >
           <div class=" flex space-y-2  flex-col-reverse">
             {chat.map((msg) => (
-              <div class="flex my-1 items-end">
+              <div class="flex my-1 items-end" key={msg.message}>
                 <div class="flex flex-col-reverse space-y-2 text-xs max-w-xs mx-2 order-2 items-start">
                   <span class="px-4 py-2 mb-[2px] rounded-lg inline-block rounded-bl-none bg-gray-300 text-gray-600 dark:text-gray-300 dark:bg-gray-700 ">
                     {msg.message}

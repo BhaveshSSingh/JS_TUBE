@@ -1,9 +1,12 @@
 import { AiOutlineDislike, AiOutlineLike } from "react-icons/ai";
+
+import BackToHome from "../../components/BackToHome";
 import CommentComp from "./CommentComp";
 
 const VideoComp = () => {
   return (
     <>
+      <BackToHome />
       <div
         id="responsiveVideoWrapper"
         className="relative h-0 pb-fluid-video   rounded-2xl"
@@ -52,7 +55,6 @@ const VideoComp = () => {
           />
         </div>
       </div>
-
       <CommentComp />
     </>
   );
