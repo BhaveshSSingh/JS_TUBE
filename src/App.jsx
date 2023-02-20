@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Outlet, useNavigate } from "react-router-dom";
 import { fetchHomePageVids } from "./app/features/appSlice";
+import Footer from "./components/Footer";
 import Nav from "./components/nav/Nav";
 import Panel from "./components/Panel";
 // import Login from "./pages/LoginPage";
@@ -26,6 +27,7 @@ function App() {
           <Panel />
           <Outlet />
         </div>
+        <Footer />
       </div>
     </>
   );

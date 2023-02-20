@@ -18,7 +18,7 @@ const VideoCard = ({ videoData }) => {
           />
 
           <div className="p-2 pr-0 flex">
-            <div class="flex-shrink-0 w-9 h-9 rounded-full overflow-hidden bg-white">
+            <div className="flex-shrink-0 w-9 h-9 rounded-full overflow-hidden bg-white">
               <img
                 src="https://yt3.ggpht.com/ytc/AAUvwnhbzltKjEkb2tlCdRpx2-wjpvBYy_RRMQzNmpSmLQ=s68-c-k-c0x00ffffff-no-rj"
                 alt="channel pfp"
@@ -31,10 +31,10 @@ const VideoCard = ({ videoData }) => {
               {title}
             </h5>
           </div>
-          <div class="flex items-center space-x-4 px-3 pb-1 pt-0">
-            <div class="font-medium dark:text-white">
+          <div className="flex items-center space-x-4 px-3 pb-1 pt-0">
+            <div className="font-medium dark:text-white">
               <p className="text-indigo-500">{channelTitle}</p>
-              <div class="text-sm ">
+              <div className="text-sm ">
                 <p className=" text-base mb-1 font-bold flex items-center dark:text-gray-400">
                   {/* {viewCount} views */}
                   <GoPrimitiveDot className="mx-2" size={10} />{" "}

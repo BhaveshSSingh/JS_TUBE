@@ -22,6 +22,7 @@ const appSlice = createSlice({
     homepageVids: [],
     openMenu: false,
     loading: true,
+
     clickedVideo: {
       title: "",
       link: "",

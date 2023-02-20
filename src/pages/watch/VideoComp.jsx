@@ -27,14 +27,14 @@ const VideoComp = () => {
           <div className="p-1 flex  ">
             <div className="pr-4">
               <img
-                class="bg-indigo-400 w-16 h-16 rounded-full"
+                className="bg-indigo-400 w-16 h-16 rounded-full"
                 src="https://yt3.ggpht.com/A_3mLbY1nzH3MPjzEftkO8LK02HazD4PWy9XbwLDQ4hDkbBCla4EkcVNM0kZDTeMWqNCD4jVbA=s68-c-k-c0x00ffffff-no-rj"
                 alt="channel pfp"
               />
             </div>
-            <div class="font-medium dark:text-white">
+            <div className="font-medium dark:text-white">
               <p className="font-bold text-indigo-400">Tanay Pratap</p>
-              <div class="text-sm ">
+              <div className="text-sm ">
                 <p className=" text-base mb-1 font-semibold flex items-center dark:text-gray-400">
                   10090 subscribers
                 </p>
