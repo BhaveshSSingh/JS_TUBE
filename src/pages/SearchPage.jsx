@@ -18,7 +18,7 @@ const SearchPage = () => {
 
   return (
     <div className="min-h-screen">
-      \ <BackToHome />
+      <BackToHome />
       <div className="p-2 pt-1 pl-0 flex flex-wrap  h-[90%]  justify-center">
         {searchVideos.length === 0 ? (
           <VideoShimmer />
