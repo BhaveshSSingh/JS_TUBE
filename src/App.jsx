@@ -9,11 +9,12 @@ import Panel from "./components/Panel";
 
 function App() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   useEffect(() => {
     dispatch(fetchHomePageVids());
   }, []);
 
-  const navigate = useNavigate();
   useEffect(() => {
     navigate("/home");
   }, []);

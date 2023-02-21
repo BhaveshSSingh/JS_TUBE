@@ -1,7 +1,7 @@
 import { GoPrimitiveDot } from "react-icons/go";
 
 const VideoCard = ({ videoData }) => {
-  console.log("videoData :", videoData);
+  // console.log("videoData :", videoData);
   const { snippet } = videoData;
   const { statistics } = videoData;
 

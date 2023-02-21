@@ -1,18 +1,18 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import { useDispatch } from "react-redux";
-// import { searchLetter } from "../../app/features/emailSlice";
+import { searchLetter } from "../../app/features/searchSlice";
+import { useDispatch } from "react-redux";
 
 const Search = () => {
   const [query, setQuery] = useState("");
 
-  //   const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const searchHandler = (e) => {
     e.preventDefault();
+    dispatch(searchLetter(query));
     navigate("/search");
-    // dispatch(searchLetter(query));
   };
 
   return (

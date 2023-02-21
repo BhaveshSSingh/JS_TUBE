@@ -73,11 +73,13 @@ const LiveChat = () => {
                     {msg.message}
                   </span>
                 </div>
-                <img
-                  src={msg.pfp}
-                  alt="My profile"
-                  className="w-10 h-10 my-1 rounded-full ring ring-indigo-300 order-1"
-                />
+                <div>
+                  <img
+                    src={msg.pfp}
+                    alt="My profile"
+                    className="w-10 h-10 my-1 rounded-full ring ring-indigo-300 order-1"
+                  />
+                </div>
               </div>
             ))}
           </div>

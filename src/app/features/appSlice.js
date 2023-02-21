@@ -1,16 +1,11 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { key } from "../../config";
+import { baseURL, key, key2 } from "../../config";
 
 export const fetchHomePageVids = createAsyncThunk(
   "youtubeApp/homePageVideos",
   async (thunkAPI) => {
-    //     const result = await fetch(
-    //       `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=20&regionCode=IN&
-    // key=${key}`
-    //     );
-
     const result = await fetch(
-      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=Javascript&key=${key}`
+      `${baseURL}/search?part=snippet&maxResults=25&q=Javascript&key=${key}`
     );
     return result.json();
   }
@@ -22,7 +17,6 @@ const appSlice = createSlice({
     homepageVids: [],
     openMenu: false,
     loading: true,
-
     clickedVideo: {
       title: "",
       link: "",
