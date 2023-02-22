@@ -5,13 +5,13 @@ export const baseURL = "https://youtube.googleapis.com/youtube/v3";
 
 export const fetchSearchedVids = async (
   setSearchVideos,
-  searchText,
+  query,
   selectedTag
 ) => {
   const result = await fetch(
     `${baseURL}/search?part=snippet&maxResults=25&q=${
-      searchText || selectedTag
-    }&key=${key}`
+      query || selectedTag
+    }&key=${key2}`
   );
   const data = await result.json();
   setSearchVideos(data);

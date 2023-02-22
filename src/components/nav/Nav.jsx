@@ -4,13 +4,14 @@ import { IoLogoJavascript } from "react-icons/io";
 import { useContext } from "react";
 import { ThemeContext } from "../../context/ThemeContext";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../../app/features/appSlice";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 const Nav = () => {
   const { handleThemeSwitch, theme } = useContext(ThemeContext);
-  // const user = useSelector((store) => store.user.user.displayName);
+
+  const user = useSelector((store) => store.user.user);
 
   const dispatch = useDispatch();
 
@@ -35,11 +36,10 @@ const Nav = () => {
         <Search />
         <div className="flex justify-center items-center">
           <Link to="/profile">
-            <div className="w-10 h-10  ring-4 ring-indigo-400 p-1 object-fill rounded-full text-gray-100 bg-indigo-500 flex  justify-center mr-1">
-              <img
-                src="https://api.dicebear.com/5.x/micah/svg?seed=20"
-                alt="My profile"
-              />
+            <div className="w-10 h-10  ring-4 ring-indigo-400  object-fill rounded-full text-gray-100 bg-indigo-500 flex  justify-center mr-1">
+              <div className="capitalize text-3xl">
+                {user.displayName.substring(0, 1)}
+              </div>
             </div>
           </Link>
 

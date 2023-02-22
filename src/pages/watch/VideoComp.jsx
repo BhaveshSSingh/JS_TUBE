@@ -1,9 +1,12 @@
 import { AiOutlineDislike, AiOutlineLike } from "react-icons/ai";
+import { useParams } from "react-router-dom";
 
 import BackToHome from "../../components/BackToHome";
 import CommentComp from "./CommentComp";
 
 const VideoComp = () => {
+  const { id } = useParams();
+
   return (
     <>
       <BackToHome />
@@ -13,7 +16,7 @@ const VideoComp = () => {
       >
         <iframe
           className="absolute top-0 left-0 w-full h-full rounded-t-2xl"
-          src="https://www.youtube.com/embed/zihoyz0u_cs"
+          src={`https://www.youtube.com/embed/${id}`}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         ></iframe>

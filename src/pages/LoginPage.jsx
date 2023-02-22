@@ -1,32 +1,32 @@
-// import { signInWithPopup } from "firebase/auth";
 import { IoLogoJavascript } from "react-icons/io";
-// import { useDispatch } from "react-redux";
-// import { useNavigate } from "react-router-dom";
-// import { toast } from "react-toastify";
-// import { loginReducer } from "../app/features/userSlice";
-// import { auth, provider } from "../firebase";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import { loginReducer } from "../app/features/userSlice";
+import { auth, provider } from "../firebase";
+import { signInWithPopup } from "firebase/auth";
 
 const Login = () => {
-  //   const dispatch = useDispatch();
-  //   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const loginFn = () => {
-    // signInWithPopup(auth, provider)
-    //   .then(({ user }) => {
-    //     dispatch(
-    //       loginReducer({
-    //         displayName: user.displayName,
-    //         email: user.email,
-    //         photo: user.photoURL,
-    //         userID: user.uid,
-    //       })
-    //     );
-    //     navigate("/home");
-    //     toast("Logged in Successfully");
-    //   })
-    //   .catch((error) => {
-    //     alert(error.message);
-    //   });
+    signInWithPopup(auth, provider)
+      .then(({ user }) => {
+        dispatch(
+          loginReducer({
+            displayName: user.displayName,
+            email: user.email,
+            photo: user.photoURL,
+            userID: user.uid,
+          })
+        );
+        navigate("/home");
+        // toast("Logged in Successfully");
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
   };
   return (
     <>
@@ -35,7 +35,7 @@ const Login = () => {
         <button
           onClick={loginFn}
           type="button"
-          className="text-white bg-indigo-600 hover:bg-indigo-600/90 focus:ring-4 focus:outline-none focus:ring-indigo-600/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-indigo-600/55 mr-2 mb-2"
+          className="text-white bg-indigo-600 hover:bg-indigo-600/90 focus:ring-4 focus:outline-none focus:ring-indigo-600/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-indigo-600/55 mr-2 mb-2 cursor-pointer"
         >
           <svg
             className="w-4 h-4 mr-2 -ml-1"

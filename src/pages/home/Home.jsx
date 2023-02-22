@@ -6,16 +6,13 @@ import VideoContainer from "./VideoContainer";
 
 const Home = () => {
   const [searchVideos, setSearchVideos] = useState([]);
-  console.log("searchVideos :", searchVideos);
 
-  const selectedTag = useSelector((store) => store.tags.keyWord);
-  console.log("selectedTag :", selectedTag);
+  const query = useSelector((store) => store.tags.keyWord);
 
-  // useEffect(() => {
-  //   fetchSearchedVids(setSearchVideos, selectedTag);
-  // }, [selectedTag]);
+  useEffect(() => {
+    fetchSearchedVids(setSearchVideos, query);
+  }, [query]);
 
-  console.log(" in tags:", searchVideos);
   return (
     <div className="p-2 pl-0  min-h-screen">
       <TagList />

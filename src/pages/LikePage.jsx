@@ -6,7 +6,8 @@ const LikePage = () => {
   return (
     <div className="min-h-screen">
       <BackToHome />
-      <VideoContainer />
+      {/* <VideoContainer /> */}
+      Page Banao
     </div>
   );
 };

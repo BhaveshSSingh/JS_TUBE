@@ -8,13 +8,12 @@ import VideoCard from "./home/VideoCard";
 
 const SearchPage = () => {
   const [searchVideos, setSearchVideos] = useState([]);
-  console.log("searchVideos :", searchVideos);
 
-  const searchText = useSelector((store) => store.search.searchQuery);
+  const query = useSelector((store) => store.search.searchQuery);
 
   useEffect(() => {
-    fetchSearchedVids(setSearchVideos, searchText);
-  }, [searchText]);
+    fetchSearchedVids(setSearchVideos, query);
+  }, [query]);
 
   return (
     <div className="min-h-screen">
@@ -25,7 +24,7 @@ const SearchPage = () => {
         ) : (
           <>
             {searchVideos.items.map((vid) => (
-              <Link to={`/watch/${vid.id}`}>
+              <Link to={`/watch/${vid.id.videoId}`}>
                 <VideoCard key={vid.id} videoData={vid} />
               </Link>
             ))}

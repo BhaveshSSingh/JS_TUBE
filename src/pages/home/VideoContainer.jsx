@@ -4,20 +4,23 @@ import { Link } from "react-router-dom";
 import VideoCard from "./VideoCard";
 
 const VideoContainer = ({ video }) => {
-  // const videoData = useSelector((store) => store.app.homepageVids);
-  // console.log("videoData :", videoData.length);
-
-  // const videoData = video;
-  // console.log("videoData :", videoData);
-
   const videoData = video;
+
+  const validId = (vid) => {
+    if (vid.id.videoId) {
+      return vid.id.videoId;
+    } else if (vid.id.playlistId) {
+      return vid.id.playlistId;
+    }
+  };
+
   return (
     <div className="p-2 pt-1 pl-0 flex flex-wrap  h-[90%]  justify-center">
       {videoData.length === 0 ? (
         <VideoShimmer />
       ) : (
         videoData.items.map((vid) => (
-          <Link to={`/watch/${vid.id}`}>
+          <Link to={`/watch/${validId(vid)}`}>
             <VideoCard key={vid.id} videoData={vid} />
           </Link>
         ))
