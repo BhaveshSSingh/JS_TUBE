@@ -1,6 +1,6 @@
 import { BiCoffeeTogo } from "react-icons/bi";
 import { IoLogoJavascript } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -12,19 +12,20 @@ const Footer = () => {
       </span>
 
       <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
-        Made with
+        Made with a lot of
         <BiCoffeeTogo
           size={30}
           className="text-brown-[#5d4037]"
           color="brown"
         />
         by
-        {/* <a
-          href="/https://www.linkedin.com/in/bhavesh-singh-1641001b1/"
+        <a
+          href="https://linkedin.com/in/bhavesh-singh-1641001b1/"
+          target="_blank"
           className="flex items-center"
         >
-          <span className="mx-1">Bhavesh Singh</span>
-        </a> */}
+          <span className="mx-1 underline">Bhavesh Singh</span>
+        </a>
       </ul>
     </footer>
   );

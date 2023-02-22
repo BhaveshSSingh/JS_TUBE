@@ -3,12 +3,14 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import VideoCard from "./VideoCard";
 
-const VideoContainer = ({}) => {
-  const videoData = useSelector((store) => store.app.homepageVids);
+const VideoContainer = ({ video }) => {
+  // const videoData = useSelector((store) => store.app.homepageVids);
   // console.log("videoData :", videoData.length);
 
   // const videoData = video;
   // console.log("videoData :", videoData);
+
+  const videoData = video;
   return (
     <div className="p-2 pt-1 pl-0 flex flex-wrap  h-[90%]  justify-center">
       {videoData.length === 0 ? (

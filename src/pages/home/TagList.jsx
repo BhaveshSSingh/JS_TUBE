@@ -5,6 +5,7 @@ const TagList = ({}) => {
   const dispatch = useDispatch();
 
   const tagHandler = (name) => {
+    console.log("name :", name);
     // console.log(" Name:", name);
 
     dispatch(getByTagName(name));

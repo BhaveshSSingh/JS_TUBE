@@ -13,6 +13,7 @@ const Search = () => {
     e.preventDefault();
     dispatch(searchLetter(query));
     navigate("/search");
+    setQuery("");
   };
 
   return (

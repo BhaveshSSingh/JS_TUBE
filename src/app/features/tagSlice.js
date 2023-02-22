@@ -1,15 +1,4 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { baseURL, key } from "../../config";
-
-// export const fetchVidsByCategory = createAsyncThunk(
-//   "youtubeApp/homePageVideos",
-//   async (thunkAPI, keyWord) => {
-//     const result = await fetch(
-//       `${baseURL}/search?part=snippet&maxResults=25&q=${keyWord}&key=${key}`
-//     );
-//     return result.json();
-//   }
-// );
+import { createSlice } from "@reduxjs/toolkit";
 
 const tagSlice = createSlice({
   name: "tags",
