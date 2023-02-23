@@ -1,23 +1,23 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Outlet, useNavigate } from "react-router-dom";
+import { HomePageCache } from "./app/features/appSlice";
 import { loginReducer } from "./app/features/userSlice";
 import Footer from "./components/Footer";
 import Nav from "./components/nav/Nav";
 import Panel from "./components/Panel";
+import { fetchSearchedVids } from "./config";
 import { auth } from "./firebase";
 import Login from "./pages/LoginPage";
 
 function App() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-
   useEffect(() => {
-    navigate("/watch/:id");
+    navigate("home");
   }, []);
 
   const user = useSelector((store) => store.user.user);
-
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       if (user) {

@@ -3,6 +3,7 @@ import { AiOutlineSend } from "react-icons/ai";
 import { HiChevronUpDown } from "react-icons/hi2";
 import { useDispatch, useSelector } from "react-redux";
 import { addToChat } from "../../../app/features/chatSlice";
+import { avatars } from "../../../config";
 import { randomMsgs, Scroll } from "./liveHelper";
 
 const LiveChat = () => {
@@ -23,29 +24,30 @@ const LiveChat = () => {
 
   const liveChatHandler = (e) => {
     e.preventDefault();
-    dispatch(
-      addToChat({
-        message: text,
-        pfp: "https://i.redd.it/0s865ngkc4t81.jpg",
-      })
-    );
+    // dispatch(
+    //   addToChat({
+    //     message: text,
+    //     pfp: "https://i.redd.it/0s865ngkc4t81.jpg",
+    //   })
+    // );
     setText("");
   };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const seed = Math.round(Math.random() * 100);
-      // const pfpURL = `https://api.dicebear.com/5.x/micah/svg?seed=${seed}`;
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     const seed = Math.round(Math.random() * 100);
+  //     var avatar = avatars[Math.floor(Math.random() * avatars.length)];
+  //     // const pfpURL = `https://api.dicebear.com/5.x/${avatar}/svg?seed=${seed}`;
 
-      dispatch(
-        addToChat({
-          message: randomMsgs(40),
-          // pfp: pfpURL,
-        })
-      );
-    }, 15000);
-    return () => clearInterval(interval);
-  }, []);
+  //     dispatch(
+  //       addToChat({
+  //         message: randomMsgs(40),
+  //         // pfp: pfpURL,
+  //       })
+  //     );
+  //   }, 1500);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   return (
     <>

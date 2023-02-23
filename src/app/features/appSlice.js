@@ -3,23 +3,33 @@ import { createSlice } from "@reduxjs/toolkit";
 const appSlice = createSlice({
   name: "app",
   initialState: {
+    homePageVids: [],
     openMenu: false,
+
     clickedVideo: {
-      title: "",
-      link: "",
-      likeCount: "",
-      description: "",
       channelName: "",
-      channelAvatar: "",
-      channelSubscribers: "",
+      videoTitle: "",
+      videoDate: "",
+      description: "",
     },
   },
   reducers: {
     toggleMenu: (state) => {
       state.openMenu = !state.openMenu;
     },
+    hideMenu: (state) => {
+      state.openMenu = false;
+    },
+    HomePageCache: (state, action) => {
+      state.homePageVids = action.payload;
+    },
+
+    clickedVideoInfo: (state, action) => {
+      state.clickedVideo = action.payload;
+    },
   },
 });
 
-export const { toggleMenu } = appSlice.actions;
+export const { toggleMenu, hideMenu, HomePageCache, clickedVideoInfo } =
+  appSlice.actions;
 export default appSlice.reducer;

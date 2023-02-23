@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BsChatLeftDots } from "react-icons/bs";
 import { IoMdClose } from "react-icons/io";
-import Modal from "../../components/Modal";
+import Modal from "../../../components/Modal";
 import { AiFillDelete } from "react-icons/ai";
 import { BsFillPencilFill } from "react-icons/bs";
 

@@ -1,5 +1,4 @@
 import VideoShimmer from "../../components/loading/VideoShimmer";
-import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import VideoCard from "./VideoCard";
 
@@ -25,7 +24,6 @@ const VideoContainer = ({ video }) => {
           </Link>
         ))
       )}
-      {/* <VideoShimmer /> */}
     </div>
   );
 };

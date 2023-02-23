@@ -1,22 +1,32 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { baseURL, fetchSearchedVids, key2 } from "../../config";
+import { HomePageCache } from "../../app/features/appSlice";
+import { baseURL, fetchSearchedVids, key } from "../../config";
 import TagList from "./TagList";
 import VideoContainer from "./VideoContainer";
 
 const Home = () => {
-  const [searchVideos, setSearchVideos] = useState([]);
+  const dispatch = useDispatch();
 
   const query = useSelector((store) => store.tags.keyWord);
+  const videoList = useSelector((store) => store.app.homePageVids);
 
   useEffect(() => {
-    fetchSearchedVids(setSearchVideos, query);
+    fetchData();
   }, [query]);
+
+  const fetchData = async () => {
+    const result = await fetch(
+      `${baseURL}/search?part=snippet&maxResults=25&q=${query}&key=${key}`
+    );
+    const data = await result.json();
+    dispatch(HomePageCache(data));
+  };
 
   return (
     <div className="p-2 pl-0  min-h-screen">
       <TagList />
-      <VideoContainer video={searchVideos} />
+      <VideoContainer video={videoList} />
     </div>
   );
 };
