@@ -7,6 +7,8 @@ import Nav from "./components/nav/Nav";
 import Panel from "./components/Panel";
 import { auth } from "./firebase";
 import Login from "./pages/LoginPage";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const navigate = useNavigate();
@@ -45,6 +47,7 @@ function App() {
           <Footer />
         </div>
       )}
+      <ToastContainer />
     </>
   );
 }

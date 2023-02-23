@@ -14,8 +14,15 @@ const likeSlice = createSlice({
         state.likedPage.push(action.payload);
       }
     },
+    removeFromLikedPage(state, action) {
+      const exist = state.likedPage.filter(
+        (vid) => vid.videoTitle !== action.payload.videoTitle
+      );
+
+      state.likedPage = exist;
+    },
   },
 });
 
-export const { addTolikedPage } = likeSlice.actions;
+export const { addTolikedPage, removeFromLikedPage } = likeSlice.actions;
 export default likeSlice.reducer;

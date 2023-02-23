@@ -54,8 +54,6 @@ const VideoCard = ({ videoData }) => {
                 <p className=" text-base mb-1 font-bold flex items-center dark:text-gray-400">
                   {publishedAt.substring(0, 10)}
                 </p>
-                {/* <div className="text-sm "> */}
-                {/* </div> */}
               </div>
             </div>
           </div>

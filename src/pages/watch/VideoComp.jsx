@@ -1,7 +1,11 @@
 import { AiOutlineDislike, AiOutlineLike } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { addTolikedPage } from "../../app/features/likedSlice";
+import { toast } from "react-toastify";
+import {
+  addTolikedPage,
+  removeFromLikedPage,
+} from "../../app/features/likedSlice";
 
 import BackToHome from "../../components/BackToHome";
 import { avatars } from "../../config";
@@ -21,6 +25,15 @@ const VideoComp = () => {
 
   const likeHandler = () => {
     dispatch(addTolikedPage(videoDetails));
+    toast("Added to Liked Videos 👍");
+  };
+  const dislikeHandler = () => {
+    dispatch(removeFromLikedPage(videoDetails));
+    toast("Removed from Liked Videos  👎");
+  };
+
+  const subscribeHandler = () => {
+    return;
   };
 
   return (
@@ -58,6 +71,15 @@ const VideoComp = () => {
                 </p>
               </div>
             </div>
+            <div className="pl-2 text-xl ">
+              <button
+                onClick={subscribeHandler}
+                type="button"
+                className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-indigo-200 font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-indigo-700"
+              >
+                Subscribe
+              </button>
+            </div>
           </div>
         </div>
         <div className="flex pr-3 justify-between border border-gray-900 dark:border-gray-400 h-full rounded-full w-28">
@@ -69,6 +91,7 @@ const VideoComp = () => {
 
           <div className=" border border-l-gray-900  " />
           <AiOutlineDislike
+            onClick={dislikeHandler}
             className="mt-3 m-2 hover:text-red-600 cursor-pointer "
             size={28}
           />

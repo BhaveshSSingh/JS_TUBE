@@ -18,7 +18,7 @@ const WatchPage = () => {
           <VideoComp />
         </div>
 
-        <div className=" xl:w-[40vw]">
+        <div className=" xl:w-[40vw] pt-2">
           <LiveChat />
           {/* <div
             className="flex flex-wrap justify-center
