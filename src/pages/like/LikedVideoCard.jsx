@@ -1,4 +1,3 @@
-import { useDispatch } from "react-redux";
 import { avatars } from "../../config";
 
 const LikedVideoCard = ({ videoData }) => {
