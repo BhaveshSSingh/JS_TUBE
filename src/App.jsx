@@ -1,12 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Outlet, useNavigate } from "react-router-dom";
-import { HomePageCache } from "./app/features/appSlice";
 import { loginReducer } from "./app/features/userSlice";
 import Footer from "./components/Footer";
 import Nav from "./components/nav/Nav";
 import Panel from "./components/Panel";
-import { fetchSearchedVids } from "./config";
 import { auth } from "./firebase";
 import Login from "./pages/LoginPage";
 
@@ -47,14 +45,6 @@ function App() {
           <Footer />
         </div>
       )}
-      {/* <div className=" bg-white text-black dark:bg-gray-900 dark:text-gray-200 w-full h-full">
-        <Nav />
-        <div className="flex">
-          <Panel />
-          <Outlet />
-        </div>
-        <Footer />
-      </div> */}
     </>
   );
 }

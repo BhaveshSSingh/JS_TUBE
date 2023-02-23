@@ -1,15 +1,8 @@
-import {
-  AiOutlineHome,
-  AiFillLike,
-  AiOutlineVideoCamera,
-  AiOutlineCloudUpload,
-} from "react-icons/ai";
+import { AiFillLike } from "react-icons/ai";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { BsPerson } from "react-icons/bs";
 import { IoMdPerson } from "react-icons/io";
 import { MdSubscriptions, MdHomeFilled } from "react-icons/md";
-import { SiMinutemailer } from "react-icons/si";
 const Panel = () => {
   const openMenu = useSelector((store) => store.app.openMenu);
 

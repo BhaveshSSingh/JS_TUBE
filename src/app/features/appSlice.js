@@ -11,6 +11,8 @@ const appSlice = createSlice({
       videoTitle: "",
       videoDate: "",
       description: "",
+      thumbnail: "",
+      videoId: "",
     },
   },
   reducers: {

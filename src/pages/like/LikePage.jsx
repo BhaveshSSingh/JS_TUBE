@@ -1,15 +1,14 @@
-import { Link } from "react-router-dom";
-import VideoContainer from "./home/VideoContainer";
-import BackToHome from "../components/BackToHome";
+import BackToHome from "../../components/BackToHome";
 import { useSelector } from "react-redux";
+import LikedVideoContainer from "./LikedVideoContainer";
 
 const LikePage = () => {
   const likedList = useSelector((store) => store.like.likedPage);
+  console.log("likedList :", likedList);
   return (
     <div className="min-h-screen">
       <BackToHome />
-      <VideoContainer video={likedList} />
-      Page Banao
+      <LikedVideoContainer video={likedList} />
     </div>
   );
 };

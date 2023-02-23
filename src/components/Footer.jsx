@@ -1,6 +1,6 @@
 import { BiCoffeeTogo } from "react-icons/bi";
 import { IoLogoJavascript } from "react-icons/io";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (

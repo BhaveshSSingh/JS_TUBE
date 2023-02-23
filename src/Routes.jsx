@@ -1,9 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
-// import Body from "./components/Body";
 import ErrorMsg from "./components/Error";
 import Home from "./pages/home/Home";
-import LikePage from "./pages/LikePage";
+import LikePage from "./pages/like/LikePage";
 import ProfilePage from "./pages/ProfilePage";
 import SearchPage from "./pages/SearchPage";
 import Subscription from "./pages/Subscription";
