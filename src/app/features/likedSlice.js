@@ -7,7 +7,12 @@ const likeSlice = createSlice({
   },
   reducers: {
     addTolikedPage(state, action) {
-      state.likedPage.push(action.payload);
+      const exist = state.likedPage.find(
+        (vid) => vid.videoTitle === action.payload.videoTitle
+      );
+      if (!exist) {
+        state.likedPage.push(action.payload);
+      }
     },
   },
 });

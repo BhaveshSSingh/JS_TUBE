@@ -4,7 +4,6 @@ import VideoCard from "./VideoCard";
 
 const VideoContainer = ({ video }) => {
   const videoData = video;
-  console.log("videoData :", videoData);
 
   const validId = (vid) => {
     if (vid.id.videoId) {

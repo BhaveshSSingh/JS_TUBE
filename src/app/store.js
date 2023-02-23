@@ -8,11 +8,11 @@ import userSlice from "./features/userSlice";
 
 export const store = configureStore({
   reducer: {
+    like: likedSlice,
     app: appSlice,
     chat: chatSlice,
     search: searchSlice,
     user: userSlice,
-    like: likedSlice,
     tags: tagSlice,
   },
 });

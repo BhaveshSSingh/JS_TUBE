@@ -12,7 +12,7 @@ export const fetchSearchedVids = async (
   const result = await fetch(
     `${baseURL}/search?part=snippet&maxResults=25&q=${
       query || selectedTag
-    }&key=${key}`
+    }&key=${key2}`
   );
   const data = await result.json();
   setSearchVideos(data);

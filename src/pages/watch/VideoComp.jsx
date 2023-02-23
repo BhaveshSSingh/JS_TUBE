@@ -13,7 +13,6 @@ const VideoComp = () => {
   const dispatch = useDispatch();
 
   const videoDetails = useSelector((store) => store.app.clickedVideo);
-  console.log("videoDetails :", videoDetails.description);
 
   const seed = Math.round(Math.random() * 100);
   var avatar = avatars[Math.floor(Math.random() * avatars.length)];

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { HomePageCache } from "../../app/features/appSlice";
-import { baseURL, fetchSearchedVids, key } from "../../config";
+import { baseURL, key2 } from "../../config";
 import TagList from "./TagList";
 import VideoContainer from "./VideoContainer";
 
@@ -17,7 +17,7 @@ const Home = () => {
 
   const fetchData = async () => {
     const result = await fetch(
-      `${baseURL}/search?part=snippet&maxResults=25&q=${query}&key=${key}`
+      `${baseURL}/search?part=snippet&maxResults=25&q=${query}&key=${key2}`
     );
     const data = await result.json();
     dispatch(HomePageCache(data));

@@ -4,7 +4,6 @@ import LikedVideoContainer from "./LikedVideoContainer";
 
 const LikePage = () => {
   const likedList = useSelector((store) => store.like.likedPage);
-  console.log("likedList :", likedList);
   return (
     <div className="min-h-screen">
       <BackToHome />

@@ -4,10 +4,6 @@ import LikedVideoCard from "./LikedVideoCard";
 
 const LikedVideoContainer = ({ video }) => {
   const videoData = video;
-  console.log(
-    "likedcontainer :",
-    videoData.map((vid) => vid)
-  );
 
   return (
     <div className="p-2 pt-1 pl-0 flex flex-wrap  h-[90%]  justify-center">

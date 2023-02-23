@@ -5,7 +5,6 @@ import { avatars } from "../../config";
 const VideoCard = ({ videoData }) => {
   const { snippet } = videoData;
   const id = videoData.id.videoId;
-  console.log("id :", id);
   const seed = Math.round(Math.random() * 100);
   var avatar = avatars[Math.floor(Math.random() * avatars.length)];
 
