@@ -22,7 +22,7 @@ const Login = () => {
           })
         );
         navigate("/home");
-        // toast("Logged in Successfully");
+        toast("Logged in Successfully");
       })
       .catch((error) => {
         alert(error.message);
@@ -30,7 +30,7 @@ const Login = () => {
   };
   return (
     <>
-      <div className="grid place-items-center min-h-screen	border border-indigo-400 rounded-xl">
+      <div className="grid place-items-center min-h-screen	">
         <IoLogoJavascript size={200} className="text-indigo-600" />
         <button
           onClick={loginFn}

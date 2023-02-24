@@ -6,10 +6,6 @@ import { auth } from "../firebase";
 
 const ProfilePage = () => {
   const user = useSelector((store) => store.user.user);
-  // const sentEmail = useSelector((store) => store.message.numberOfSentEmails);
-  // const favEmail = useSelector((store) => store.email.favEmails);
-  // const readEmail = useSelector((store) => store.email.readEmails);
-  // const unReadEmail = useSelector((store) => store.email.unReadEmails);
 
   const dispatch = useDispatch();
 
