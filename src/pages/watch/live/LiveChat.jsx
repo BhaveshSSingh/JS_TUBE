@@ -12,52 +12,43 @@ const LiveChat = () => {
   const chat = useSelector((store) => store.chat.chat);
   const container = useRef(null);
 
-  // const [hide, setHide] = useState("");
-
-  // const hideHandler = () => {
-  //   setHide("h");
-  // };
-
   useEffect(() => {
     Scroll(container);
   }, [chat, text]);
 
   const liveChatHandler = (e) => {
     e.preventDefault();
-    // dispatch(
-    //   addToChat({
-    //     message: text,
-    //     pfp: "https://i.redd.it/0s865ngkc4t81.jpg",
-    //   })
-    // );
+    dispatch(
+      addToChat({
+        message: text,
+        pfp: "https://i.redd.it/0s865ngkc4t81.jpg",
+      })
+    );
     setText("");
   };
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     const seed = Math.round(Math.random() * 100);
-  //     var avatar = avatars[Math.floor(Math.random() * avatars.length)];
-  //     // const pfpURL = `https://api.dicebear.com/5.x/${avatar}/svg?seed=${seed}`;
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const seed = Math.round(Math.random() * 100);
+      var avatar = avatars[Math.floor(Math.random() * avatars.length)];
+      const pfpURL = `https://api.dicebear.com/5.x/${avatar}/svg?seed=${seed}`;
 
-  //     dispatch(
-  //       addToChat({
-  //         message: randomMsgs(40),
-  //         // pfp: pfpURL,
-  //       })
-  //     );
-  //   }, 1500);
-  //   return () => clearInterval(interval);
-  // }, []);
+      dispatch(
+        addToChat({
+          message: randomMsgs(40),
+          pfp: pfpURL,
+        })
+      );
+    }, 1500);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
       <div className="flex-1   h-[600px] justify-between flex flex-col  border ml-2  border-indigo-400  rounded-lg ">
         <div className="flex px-3 sm:items-center justify-between py-2  border-b-2  border-gray-200 dark:border-gray-600 ">
           Live Chat
-          <button
-            className="inline-flex justify-center p-2 text-indigo-600 rounded-full cursor-pointer hover:bg-indigo-100 dark:text-indigo-500 dark:hover:bg-gray-600"
-            // onClick={hideHandler}
-          >
+          <button className="inline-flex justify-center p-2 text-indigo-600 rounded-full cursor-pointer hover:bg-indigo-100 dark:text-indigo-500 dark:hover:bg-gray-600">
             <HiChevronUpDown size={20} />
           </button>
         </div>

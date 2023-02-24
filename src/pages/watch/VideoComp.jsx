@@ -10,7 +10,6 @@ import {
 import BackToHome from "../../components/BackToHome";
 import { avatars } from "../../config";
 import CommentComp from "./comment/CommentComp";
-import CommentSection from "./comment/CommentSection";
 
 const VideoComp = () => {
   const { id } = useParams();
@@ -102,7 +101,7 @@ const VideoComp = () => {
           {videoDetails.description}
         </div>
       </>
-      <CommentComp />
+      <CommentComp id={id} />
       {/* <CommentSection /> */}
     </>
   );

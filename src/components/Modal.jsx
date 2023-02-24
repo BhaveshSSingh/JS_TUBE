@@ -12,7 +12,7 @@ function Modal({ children, showModal, setShowModal }) {
   return (
     showModal && (
       <div
-        className="fixed top-0 left-0 w-screen h-screen  bg-gray-800/60 text-white p-2"
+        className="fixed top-0 left-0 w-screen h-screen  bg-gray-800/60 text-white p-2 z-20"
         onClick={closeModal}
         ref={modalRef}
       >
