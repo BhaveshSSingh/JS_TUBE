@@ -37,7 +37,7 @@ const Nav = () => {
         <div className="flex justify-center items-center">
           <Link to="/profile">
             <div className="relative inline-flex   ring-4 ring-indigo-500 items-center justify-center w-10 h-10 overflow-hidden bg-indigo-300 rounded-full mr-1 dark:bg-indigo-600">
-              <span className="font-medium ">
+              <span className="font-medium text-2xl capitalize ">
                 {user.displayName.substring(0, 1)}
               </span>
             </div>

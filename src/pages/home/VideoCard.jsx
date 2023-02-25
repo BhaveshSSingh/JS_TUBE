@@ -16,6 +16,7 @@ const VideoCard = ({ videoData }) => {
   const videoDetailHandler = () => {
     dispatch(
       clickedVideoInfo({
+        channelAvatar: pfpURL,
         channelName: channelTitle,
         videoTitle: title,
         videoDate: publishedAt.substring(0, 10),

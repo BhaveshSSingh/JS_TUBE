@@ -10,7 +10,6 @@ const tagSlice = createSlice({
       state.keyWord = action.payload;
     },
   },
-  extraReducers: {},
 });
 
 export const { getByTagName } = tagSlice.actions;

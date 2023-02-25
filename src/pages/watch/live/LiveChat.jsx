@@ -10,6 +10,7 @@ const LiveChat = () => {
   const dispatch = useDispatch();
   const [text, setText] = useState("");
   const chat = useSelector((store) => store.chat.chat);
+  const user = useSelector((store) => store.user.user);
   const container = useRef(null);
 
   useEffect(() => {
@@ -27,21 +28,21 @@ const LiveChat = () => {
     setText("");
   };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const seed = Math.round(Math.random() * 100);
-      var avatar = avatars[Math.floor(Math.random() * avatars.length)];
-      const pfpURL = `https://api.dicebear.com/5.x/${avatar}/svg?seed=${seed}`;
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     const seed = Math.round(Math.random() * 100);
+  //     var avatar = avatars[Math.floor(Math.random() * avatars.length)];
+  //     const pfpURL = `https://api.dicebear.com/5.x/${avatar}/svg?seed=${seed}`;
 
-      dispatch(
-        addToChat({
-          message: randomMsgs(30),
-          pfp: pfpURL,
-        })
-      );
-    }, 1500);
-    return () => clearInterval(interval);
-  }, []);
+  //     dispatch(
+  //       addToChat({
+  //         message: randomMsgs(30),
+  //         pfp: pfpURL,
+  //       })
+  //     );
+  //   }, 1500);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   return (
     <>
@@ -86,7 +87,7 @@ const LiveChat = () => {
               <div>
                 <img
                   className="w-10 h-10 rounded-full m-1 mr-6 flex ring ring-indigo-300 order-1"
-                  src="https://i.redd.it/0s865ngkc4t81.jpg"
+                  src={"https://i.redd.it/0s865ngkc4t81.jpg"}
                   alt="My profile"
                 />
               </div>
@@ -96,7 +97,7 @@ const LiveChat = () => {
                 className=" 
                
                 block ml-0 mx-2 p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-indigo-500 dark:focus:border-indigo-500"
-                placeholder="Chat publicly {your name}..."
+                placeholder={"Chat publicly " + user.displayName}
               />
               <button
                 onClick={liveChatHandler}

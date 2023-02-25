@@ -17,7 +17,7 @@ const Home = () => {
 
   const fetchData = async () => {
     const result = await fetch(
-      `${baseURL}/search?part=snippet&maxResults=25&q=${query}&key=${key3}`
+      `${baseURL}/search?part=snippet&maxResults=25&q=${query}&key=${key}`
     );
     const data = await result.json();
     dispatch(HomePageCache(data));

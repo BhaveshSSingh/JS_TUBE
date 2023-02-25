@@ -6,9 +6,9 @@ import {
   addTolikedPage,
   removeFromLikedPage,
 } from "../../app/features/likedSlice";
+import { addToSubscribe } from "../../app/features/subscribeSlice";
 
 import BackToHome from "../../components/BackToHome";
-import { avatars } from "../../config";
 import CommentComp from "./comment/CommentComp";
 
 const VideoComp = () => {
@@ -16,11 +16,6 @@ const VideoComp = () => {
   const dispatch = useDispatch();
 
   const videoDetails = useSelector((store) => store.app.clickedVideo);
-
-  const seed = Math.round(Math.random() * 100);
-  var avatar = avatars[Math.floor(Math.random() * avatars.length)];
-
-  const pfpURL = `https://api.dicebear.com/5.x/${avatar}/svg?seed=${seed}`;
 
   const likeHandler = () => {
     dispatch(addTolikedPage(videoDetails));
@@ -32,7 +27,8 @@ const VideoComp = () => {
   };
 
   const subscribeHandler = () => {
-    return;
+    dispatch(addToSubscribe(videoDetails));
+    toast("Added to Subscribed Channels 📺");
   };
 
   return (
@@ -56,7 +52,7 @@ const VideoComp = () => {
             <div className="pr-4">
               <img
                 className="bg-indigo-400 w-16 h-16 rounded-full"
-                src={pfpURL}
+                src={videoDetails.channelAvatar}
                 alt="channel pfp"
               />
             </div>

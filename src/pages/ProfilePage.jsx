@@ -5,6 +5,8 @@ import { auth } from "../firebase";
 
 const ProfilePage = () => {
   const user = useSelector((store) => store.user.user);
+  const like = useSelector((store) => store.like.likedPage);
+  const subs = useSelector((store) => store.sub.sub);
 
   const dispatch = useDispatch();
 
@@ -21,8 +23,8 @@ const ProfilePage = () => {
 
   return (
     <>
-      <div className="flex justify-center items-center pl-2">
-        <div className="relative max-w-md mx-auto md:max-w-2xl  min-w-0 break-words dark:bg-gray-700 dark:text-gray-100 bg-white w-full mb-6 shadow-lg rounded-xl mt-16  ">
+      <div className="flex justify-center items-center pl-12  ">
+        <div className="relative max-w-[350px]  min-w-0 break-words dark:bg-gray-700 dark:text-gray-100 bg-white w-full mb-6 shadow-lg rounded-xl mt-16  ">
           <div className="px-6">
             <div className="flex flex-wrap justify-center">
               <div className="w-full flex justify-center">
@@ -36,37 +38,21 @@ const ProfilePage = () => {
                 <div className="flex justify-center lg:pt-4 pt-2 pb-0">
                   <div className="p-3 text-center">
                     <span className="text-xl font-bold block uppercase tracking-wide text-slate-700  dark:text-gray-100">
-                      {/* {sentEmail} */}
+                      {like.length}
                     </span>
                     <span className="text-sm text-slate-400  dark:text-gray-100">
                       Liked Videos
                     </span>
                   </div>
                   <div className="p-3 text-center">
-                    <span className="text-xl font-bold block uppercase tracking-wide text-slate-700 dark:text-gray-100">
-                      15
+                    <span className="text-xl font-bold block uppercase tracking-wide text-slate-700  dark:text-gray-100">
+                      {subs.length}
                     </span>
-                    <span className="text-sm text-slate-400 dark:text-gray-100">
-                      Comments{" "}
-                    </span>
-                  </div>{" "}
-                  <div className="p-3 text-center">
-                    <span className="text-xl font-bold block uppercase tracking-wide text-slate-700 dark:text-gray-100">
-                      {/* {unReadEmail.length} */}
-                    </span>
-                    <span className="text-sm text-slate-400 dark:text-gray-100">
-                      Replies
-                    </span>
-                  </div>{" "}
-                  <div className="p-3 text-center dark:text-gray-100">
-                    <span className="text-xl font-bold block uppercase tracking-wide text-slate-700 dark:text-gray-100">
-                      {/* {favEmail.length} */}
-                    </span>
-                    <span className="text-sm text-slate-400 dark:text-gray-100">
-                      Disliked Videos
+                    <span className="text-sm text-slate-400  dark:text-gray-100">
+                      Subscriptions
                     </span>
                   </div>
-                </div>
+                </div>{" "}
               </div>
             </div>
             <div className="text-center mt-2">
@@ -81,15 +67,6 @@ const ProfilePage = () => {
             <div className="mt-6 py-6 border-t border-slate-200 text-center dark:text-gray-100">
               <div className="flex flex-wrap justify-center">
                 <div className="w-full px-4">
-                  <p className="font-light leading-relaxed text-slate-600 mb-4 dark:text-gray-100">
-                    Before you hit “send,” take a moment to write a subject line
-                    that accurately describes the content, giving your reader a
-                    concrete reason to open your message. A vague or blank
-                    subject line is a missed opportunity to inform or persuade
-                    your reader. Remember — your message is not the only one in
-                    your recipient’s mailbox. A clear subject line will help a
-                    busy professional to decide that your email is worthwhile
-                  </p>
                   <button
                     onClick={logoutFn}
                     type="button"
