@@ -24,7 +24,7 @@ const Search = () => {
             <input
               type="text"
               id="simple-search"
-              className="bg-indigo-200 border border-indigo-300 text-indigo-900 text-sm rounded-lg focus:ring indigo-500 focus:border-indigo-500 block w-full pl-3 p-2.5  dark:bg-gray-400 dark:border-indigo-600 dark:placeholder-gray-800 dark:white dark:focus:ring-indigo-500 dark:focus:border-indigo-500"
+              className="bg-indigo-200 border border-indigo-300 dark:text-gray-900 text-sm rounded-lg focus:ring indigo-500 focus:border-indigo-500 block w-full pl-3 p-2.5  dark:bg-gray-400 dark:border-indigo-600 dark:placeholder-gray-800 dark:white dark:focus:ring-indigo-500 dark:focus:border-indigo-500"
               placeholder="Search"
               required
               value={query}

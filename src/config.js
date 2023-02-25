@@ -1,7 +1,3 @@
-export const key = "AIzaSyBDbwERy-VhX1FhWHIiPdxUYbTCK7mzIyc";
-export const key2 = "AIzaSyDnlz0tCI_ISktcSMzRAhC0XrNqGD7aYbc";
-export const key3 = "AIzaSyC5H3wHXKl8D_skESdlo-JiTf--WxGPEKw";
-
 export const baseURL = "https://youtube.googleapis.com/youtube/v3";
 
 export const fetchSearchedVids = async (
@@ -12,7 +8,7 @@ export const fetchSearchedVids = async (
   const result = await fetch(
     `${baseURL}/search?part=snippet&maxResults=25&q=${
       query || selectedTag
-    }&key=${key2}`
+    }&key=${import.meta.env.VITE_REACT_APP_API_KEY2}`
   );
   const data = await result.json();
   setSearchVideos(data);
@@ -20,7 +16,9 @@ export const fetchSearchedVids = async (
 
 export const fetchRecommendedVids = async (setRecommendedVids, id) => {
   const result = await fetch(
-    `${baseURL}/search?part=snippet&maxResults=25&relatedToVideoId=${id}&type=video&key=${key2}`
+    `${baseURL}/search?part=snippet&maxResults=25&relatedToVideoId=${id}&type=video&key=${
+      import.meta.env.VITE_REACT_APP_API_KEY2
+    }`
   );
   const data = await result.json();
   setRecommendedVids(data);
