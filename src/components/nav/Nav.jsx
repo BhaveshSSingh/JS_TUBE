@@ -36,10 +36,10 @@ const Nav = () => {
         <Search />
         <div className="flex justify-center items-center">
           <Link to="/profile">
-            <div className="w-10 h-10  ring-4 ring-indigo-400  object-fill rounded-full text-gray-100 bg-indigo-500 flex  justify-center mr-1">
-              <div className="capitalize text-3xl">
+            <div className="relative inline-flex   ring-4 ring-indigo-500 items-center justify-center w-10 h-10 overflow-hidden bg-indigo-300 rounded-full mr-1 dark:bg-indigo-600">
+              <span className="font-medium ">
                 {user.displayName.substring(0, 1)}
-              </div>
+              </span>
             </div>
           </Link>
 
