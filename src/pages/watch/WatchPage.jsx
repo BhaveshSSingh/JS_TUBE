@@ -1,15 +1,27 @@
 import { useDispatch } from "react-redux";
-import VideoCard from "../home/VideoCard";
 import LiveChat from "./live/LiveChat";
 import VideoComp from "./VideoComp";
 import { hideMenu } from "../../app/features/appSlice";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { fetchRecommendedVids } from "../../config";
+import { useParams } from "react-router-dom";
+import VideoContainer from "../home/VideoContainer";
 const WatchPage = () => {
+  const [recommendedVids, setRecommendedVids] = useState([]);
+  console.log("recommendedVids :", recommendedVids);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(hideMenu());
   }, []);
+
+  const { id } = useParams();
+  console.log("id :", id);
+
+  useEffect(() => {
+    fetchRecommendedVids(setRecommendedVids, id);
+  }, [id]);
 
   return (
     <>
@@ -20,32 +32,12 @@ const WatchPage = () => {
 
         <div className=" xl:w-[40vw] pt-2">
           <LiveChat />
-          {/* <div
+          <div
             className="flex flex-wrap justify-center
           "
           >
-            <VideoCard />
-            <VideoCard />
-            <VideoCard />
-            <VideoCard />
-            <VideoCard />
-            <VideoCard />
-            <VideoCard />
-            <VideoCard />
-            <VideoCard />
-            <VideoCard />
-            <VideoCard />
-            <VideoCard />
-            <VideoCard />
-            <VideoCard />
-            <VideoCard />
-            <VideoCard />
-            <VideoCard />
-            <VideoCard />
-            <VideoCard />
-            <VideoCard />
-            <VideoCard />
-          </div> */}
+            <VideoContainer video={recommendedVids} />
+          </div>
         </div>
       </div>
     </>

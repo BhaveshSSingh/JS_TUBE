@@ -33,7 +33,7 @@ const VideoCard = ({ videoData }) => {
           className="m-2 h-full  flex  justify-center rounded-lg  pt-2 "
           onClick={videoDetailHandler}
         >
-          <div className="rounded-lg shadow-lg  max-w-80 border border-t-2  dark:border-gray-700 lg:w-80 md:w-64 sm:w-64">
+          <div className="rounded-lg shadow-lg  w-96 border border-t-2  dark:border-gray-700 ">
             <img
               className="rounded-t-lg h-48 w-full "
               src={thumbnails?.medium?.url}

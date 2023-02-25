@@ -30,8 +30,6 @@ const LikedVideoCard = ({ videoData }) => {
               <p className=" text-base mb-1 font-bold flex items-center dark:text-gray-400">
                 {videoData.videoDate}
               </p>
-              {/* <div className="text-sm "> */}
-              {/* </div> */}
             </div>
           </div>
         </div>

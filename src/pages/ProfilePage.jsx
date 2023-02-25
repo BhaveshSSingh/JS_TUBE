@@ -1,5 +1,4 @@
 import { BiLogOut } from "react-icons/bi";
-import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logoutReducer } from "../app/features/userSlice";
 import { auth } from "../firebase";
@@ -22,7 +21,7 @@ const ProfilePage = () => {
 
   return (
     <>
-      <div className="flex justify-center items-center pl-10 ">
+      <div className="flex justify-center items-center pl-2">
         <div className="relative max-w-md mx-auto md:max-w-2xl  min-w-0 break-words dark:bg-gray-700 dark:text-gray-100 bg-white w-full mb-6 shadow-lg rounded-xl mt-16  ">
           <div className="px-6">
             <div className="flex flex-wrap justify-center">

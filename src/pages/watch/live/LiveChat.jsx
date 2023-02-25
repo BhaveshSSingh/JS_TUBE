@@ -35,7 +35,7 @@ const LiveChat = () => {
 
       dispatch(
         addToChat({
-          message: randomMsgs(40),
+          message: randomMsgs(30),
           pfp: pfpURL,
         })
       );

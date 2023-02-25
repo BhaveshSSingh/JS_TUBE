@@ -102,7 +102,6 @@ const VideoComp = () => {
         </div>
       </>
       <CommentComp id={id} />
-      {/* <CommentSection /> */}
     </>
   );
 };

@@ -17,7 +17,15 @@ export const fetchSearchedVids = async (
   const data = await result.json();
   setSearchVideos(data);
 };
-//
+
+export const fetchRecommendedVids = async (setRecommendedVids, id) => {
+  const result = await fetch(
+    `${baseURL}/search?part=snippet&maxResults=25&relatedToVideoId=${id}&type=video&key=${key3}`
+  );
+  const data = await result.json();
+  setRecommendedVids(data);
+};
+
 export const avatars = [
   "micah",
   "avataaars",
