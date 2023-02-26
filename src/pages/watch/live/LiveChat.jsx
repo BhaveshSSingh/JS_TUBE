@@ -40,7 +40,7 @@ const LiveChat = () => {
           pfp: pfpURL,
         })
       );
-    }, 1500);
+    }, 900);
     return () => clearInterval(interval);
   }, []);
 

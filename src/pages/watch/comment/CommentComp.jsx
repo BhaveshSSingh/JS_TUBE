@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { BsChatLeftDots } from "react-icons/bs";
 import { IoMdClose } from "react-icons/io";
 import Modal from "../../../components/Modal";
-
 import {
   addDoc,
   collection,
