@@ -28,21 +28,21 @@ const LiveChat = () => {
     setText("");
   };
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     const seed = Math.round(Math.random() * 100);
-  //     var avatar = avatars[Math.floor(Math.random() * avatars.length)];
-  //     const pfpURL = `https://api.dicebear.com/5.x/${avatar}/svg?seed=${seed}`;
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const seed = Math.round(Math.random() * 100);
+      var avatar = avatars[Math.floor(Math.random() * avatars.length)];
+      const pfpURL = `https://api.dicebear.com/5.x/${avatar}/svg?seed=${seed}`;
 
-  //     dispatch(
-  //       addToChat({
-  //         message: randomMsgs(30),
-  //         pfp: pfpURL,
-  //       })
-  //     );
-  //   }, 1500);
-  //   return () => clearInterval(interval);
-  // }, []);
+      dispatch(
+        addToChat({
+          message: randomMsgs(30),
+          pfp: pfpURL,
+        })
+      );
+    }, 1500);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>

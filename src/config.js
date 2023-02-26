@@ -8,7 +8,7 @@ export const fetchSearchedVids = async (
   const result = await fetch(
     `${baseURL}/search?part=snippet&maxResults=25&q=${
       query || selectedTag
-    }&key=${import.meta.env.VITE_REACT_APP_API_KEY2}`
+    }&key=${import.meta.env.VITE_REACT_APP_API_KEY}`
   );
   const data = await result.json();
   setSearchVideos(data);
@@ -17,7 +17,7 @@ export const fetchSearchedVids = async (
 export const fetchRecommendedVids = async (setRecommendedVids, id) => {
   const result = await fetch(
     `${baseURL}/search?part=snippet&maxResults=25&relatedToVideoId=${id}&type=video&key=${
-      import.meta.env.VITE_REACT_APP_API_KEY2
+      import.meta.env.VITE_REACT_APP_API_KEY
     }`
   );
   const data = await result.json();

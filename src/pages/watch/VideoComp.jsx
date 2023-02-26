@@ -1,7 +1,9 @@
+import { useEffect } from "react";
 import { AiOutlineDislike, AiOutlineLike } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
+import { clearChat } from "../../app/features/chatSlice";
 import {
   addTolikedPage,
   removeFromLikedPage,
@@ -14,6 +16,10 @@ import CommentComp from "./comment/CommentComp";
 const VideoComp = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(clearChat());
+  }, [id]);
 
   const videoDetails = useSelector((store) => store.app.clickedVideo);
 
@@ -56,24 +62,26 @@ const VideoComp = () => {
                 alt="channel pfp"
               />
             </div>
-            <div className="font-medium dark:text-white">
-              <p className="font-bold text-indigo-400">
-                {videoDetails.channelName}
-              </p>
-              <div className="text-sm ">
-                <p className=" mb-1 font-semibold text-sm flex items-center dark:text-gray-400">
-                  1M subscribers
+            <div className="sm:flex">
+              <div className="font-medium dark:text-white">
+                <p className="font-bold text-indigo-400">
+                  {videoDetails.channelName}
                 </p>
+                <div className="text-sm ">
+                  <p className=" mb-1 font-semibold text-sm flex items-center dark:text-gray-400">
+                    1M subscribers
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="pl-2 text-xl ">
-              <button
-                onClick={subscribeHandler}
-                type="button"
-                className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-indigo-200 font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-indigo-700"
-              >
-                Subscribe
-              </button>
+              <div className="pl-2 text-xl ">
+                <button
+                  onClick={subscribeHandler}
+                  type="button"
+                  className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-indigo-200 font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-indigo-700"
+                >
+                  Subscribe
+                </button>
+              </div>
             </div>
           </div>
         </div>

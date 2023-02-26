@@ -8,7 +8,6 @@ import { useParams } from "react-router-dom";
 import VideoContainer from "../home/VideoContainer";
 const WatchPage = () => {
   const [recommendedVids, setRecommendedVids] = useState([]);
-  console.log("recommendedVids :", recommendedVids);
 
   const dispatch = useDispatch();
 
@@ -17,7 +16,6 @@ const WatchPage = () => {
   }, []);
 
   const { id } = useParams();
-  console.log("id :", id);
 
   useEffect(() => {
     fetchRecommendedVids(setRecommendedVids, id);

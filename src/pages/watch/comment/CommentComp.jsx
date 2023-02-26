@@ -97,7 +97,10 @@ const CommentComp = ({ id }) => {
           <h1>Leave a Comment</h1>
         ) : (
           allComments.map((comment) => (
-            <div className="w-full flex justify-start items-start  p-8 ">
+            <div
+              className="w-full flex justify-start items-start  p-8 "
+              key={comment}
+            >
               <div className="mr-1 flex justify-between  items-center flex-row ">
                 <div className="w-10 h-10  ring-4 ring-indigo-400 p-1 object-fill rounded-full  bg-indigo-500 flex  justify-center mx-2">
                   <span className="text-2xl capitalize text-gray-300">

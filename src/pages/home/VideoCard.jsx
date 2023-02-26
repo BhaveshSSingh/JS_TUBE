@@ -36,6 +36,7 @@ const VideoCard = ({ videoData }) => {
         >
           <div className="rounded-lg shadow-lg  w-80 border border-t-2  dark:border-gray-700 ">
             <img
+              loading="lazy"
               className="rounded-t-lg h-48 w-full "
               src={thumbnails?.medium?.url}
               alt=""
@@ -43,7 +44,7 @@ const VideoCard = ({ videoData }) => {
 
             <div className="p-2 pr-0 flex">
               <div className="flex-shrink-0 w-10 h-10 mr-2 rounded-full overflow-hidden bg-indigo-400 ring ring-indigo-700">
-                <img src={pfpURL} alt="channel pfp" />
+                <img loading="lazy" src={pfpURL} alt="channel pfp" />
               </div>
               <h5 className="text-gray-900 text-sm  dark:text-gray-300 font-bold  line__clamp ">
                 {title}

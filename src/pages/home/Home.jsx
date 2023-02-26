@@ -18,7 +18,7 @@ const Home = () => {
   const fetchData = async () => {
     const result = await fetch(
       `${baseURL}/search?part=snippet&maxResults=25&q=${query}&key=${
-        import.meta.env.VITE_REACT_APP_API_KEY2
+        import.meta.env.VITE_REACT_APP_API_KEY
       }`
     );
     const data = await result.json();

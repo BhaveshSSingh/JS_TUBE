@@ -20,11 +20,11 @@ const SearchPage = () => {
       <BackToHome />
       <div className="p-2 pt-1 pl-0 flex flex-wrap  h-[90%]  justify-center">
         {searchVideos.length === 0 ? (
-          <VideoShimmer />
+          [...Array(25)].map((_, index) => <VideoShimmer key={index} />)
         ) : (
           <>
             {searchVideos.items.map((vid) => (
-              <Link to={`/watch/${vid.id.videoId}`}>
+              <Link to={`/watch/${vid.id.videoId}`} key={vid.id.videoId}>
                 <VideoCard key={vid.id} videoData={vid} />
               </Link>
             ))}

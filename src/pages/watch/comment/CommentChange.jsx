@@ -8,10 +8,8 @@ import Modal from "../../../components/Modal";
 import { db } from "../../../firebase";
 
 const CommentChange = ({ comment, id, user }) => {
-  console.log("comment :", comment);
   const [showModal, setShowModal] = useState(false);
   const [editcomment, setEditcomment] = useState(comment.data().Comment);
-  console.log("editcomment :", editcomment);
 
   const deletecomment = async (comment) => {
     await deleteDoc(

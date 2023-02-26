@@ -2,26 +2,64 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import ErrorMsg from "./components/Error";
 import Home from "./pages/home/Home";
-import LikePage from "./pages/like/LikePage";
-import ProfilePage from "./pages/ProfilePage";
-import SearchPage from "./pages/SearchPage";
-import Subscription from "./pages/Subscription";
-import WatchPage from "./pages/watch/WatchPage";
+import { lazy, Suspense } from "react";
+import Spinner from "./components/loading/Spinner";
+
+const LikePage = lazy(() => import("./pages/like/LikePage"));
+const Subscription = lazy(() => import("./pages/Subscription"));
+const ProfilePage = lazy(() => import("./pages/ProfilePage"));
+const SearchPage = lazy(() => import("./pages/SearchPage"));
+const WatchPage = lazy(() => import("./pages/watch/WatchPage"));
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     baseName: "js-tube.vercel.app/home",
-
     errorElement: <ErrorMsg />,
     children: [
       { path: "/home", element: <Home /> },
-      { path: "/search", element: <SearchPage /> },
-      { path: "/watch/:id", element: <WatchPage /> },
-      { path: "/profile", element: <ProfilePage /> },
-      { path: "/subscriptions", element: <Subscription /> },
-      { path: "/liked", element: <LikePage /> },
+
+      {
+        path: "/search",
+        element: (
+          <Suspense fallback={<Spinner />}>
+            <SearchPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/watch/:id",
+        element: (
+          <Suspense fallback={<Spinner />}>
+            <WatchPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/profile",
+        element: (
+          <Suspense fallback={<Spinner />}>
+            <ProfilePage />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/subscriptions",
+        element: (
+          <Suspense fallback={<Spinner />}>
+            <Subscription />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/liked",
+        element: (
+          <Suspense fallback={<Spinner />}>
+            <LikePage />
+          </Suspense>
+        ),
+      },
     ],
   },
 ]);
